@@ -81,7 +81,8 @@ def test_country_valid(_mock_crawler, _authentification_country):
     settings['WEBSHARE_USER'] = 'user'
     settings['WEBSHARE_PASSWORD'] = 'pass'
     settings['WEBSHARE_COUNTRY'] = _authentification_country[1]
-    _assert_enabled(mock_crawler, spider, settings, _authentification_country[0])
+    _assert_enabled(mock_crawler, spider, settings,
+                    _authentification_country[0])
 
 
 def test_country_invalid(_mock_crawler, _authentification_country_invalid):
@@ -92,7 +93,8 @@ def test_country_invalid(_mock_crawler, _authentification_country_invalid):
     settings['WEBSHARE_USER'] = 'user'
     settings['WEBSHARE_PASSWORD'] = 'pass'
     settings['WEBSHARE_COUNTRY'] = _authentification_country_invalid[1]
-    _assert_enabled(mock_crawler, spider, settings, _authentification_country_invalid[0])
+    _assert_enabled(mock_crawler, spider, settings,
+                    _authentification_country_invalid[0])
 
 
 @pytest.fixture(params=[60, 90, 120])
@@ -110,7 +112,6 @@ def test_enabled(_mock_crawler):
     settings = {}
     settings['WEBSHARE_ENABLED'] = True
     _assert_enabled(_mock_crawler[0], _mock_crawler[1], settings=settings)
-
 
 
 @pytest.fixture
