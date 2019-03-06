@@ -8,7 +8,9 @@ python:
 script:
   - pytest
 install:
+  - pip install pyopenssl ndg-httpsclient pyasn1
   - pip install -r requirements.txt
+
 deploy:
   provider: pypi
   user: thesamartian
