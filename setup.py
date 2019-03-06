@@ -14,7 +14,7 @@ def read(filename):
 
 
 setup(
-    name="scrapy_webshare",
+    name="scrapy-webshare",
     version="0.1.0",
     url="https://github.com/thesamartian/Webshare-Scrapy",
     license='MIT',
@@ -22,12 +22,12 @@ setup(
     author="Soufiane Benzaoui",
     author_email="benzaoui.soufiane@gmail.com",
 
-    description="An opinionated, minimal cookiecutter template for Python packages",
+    description="Webshare middleware for Scrapy",
     long_description=read("README.rst"),
 
     packages=find_packages(exclude=('tests',)),
 
-    install_requires=[],
+    install_requires=['scrapy>1.0.0', 'w3lib'],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
@@ -40,5 +40,11 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Framework :: Scrapy',
+        'Intended Audience :: Developers',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Internet :: Proxy Servers',
+        'Topic :: Software Development :: Libraries :: Application Frameworks',
+        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
 )
